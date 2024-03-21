@@ -1,8 +1,25 @@
 UnitBlueprint {
     Merge = true,
     BlueprintId = "uab4202", # Shield Generator
-    Categories = {
+        Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER2ENGINEER',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER2COMMANDER',
+        'BUILTBYTIER3COMMANDER',
+        'AEON',
+        'DRAGBUILD',
+        'STRUCTURE',
+        'DEFENSE',
+        'TECH2',
+        'SHIELD',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYDEFENSE',
         'SHOWQUEUE',
+        'SORTDEFENSE',
     },
     Display = {
         Abilities = {
@@ -30,7 +47,22 @@ UnitBlueprint {
     Merge = true,
     BlueprintId = "uab4301", # Heavy Shield Generator
     Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'AEON',
+        'DRAGBUILD',
+        'STRUCTURE',
+        'DEFENSE',
+        'TECH3',
+        'SHIELD',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYDEFENSE',
         'SHOWQUEUE',
+        'SORTDEFENSE',
     },
     Display = {
         Abilities = {
