@@ -1,0 +1,31 @@
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "urb1105",
+
+    Categories = {
+        'SHOWQUEUE',
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_upgradable>Upgradeable',
+        },
+    },
+    Economy = {
+        BuildRate = 12,
+        BuildableCategory = {
+            'eurbest2',
+        },
+        RebuildBonusIds = {
+            'urb1105',
+            'eurbest2',
+            'eurbest3',
+        },
+    },
+    General = {
+        UpgradesTo = 'eurbest2',
+        CommandCaps = {
+            RULEUCC_Pause = true,
+        },
+    },
+}
+

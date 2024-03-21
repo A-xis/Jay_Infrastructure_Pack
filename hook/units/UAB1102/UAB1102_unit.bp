@@ -1,0 +1,48 @@
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "uab1102",
+    Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER1ENGINEER',
+        'BUILTBYTIER2ENGINEER',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER2COMMANDER',
+        'BUILTBYTIER3COMMANDER',
+        'AEON',
+        'STRUCTURE',
+        'ECONOMIC',
+        'TECH1',
+        'ENERGYPRODUCTION',
+        'HYDROCARBON',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWQUEUE',
+        'SORTECONOMY',
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_upgradable>Upgradeable',
+        },
+    },
+    Economy = {
+        BuildRate = 12,
+        BuildableCategory = {
+            'bab1202',
+        },
+        RebuildBonusIds = {
+            'uab1102',
+            'bab1202',
+            'bab1302',
+            'brobt1peri',
+        },
+    },
+    General = {
+        UpgradesTo = 'bab1202',
+        CommandCaps = {
+            RULEUCC_Pause = true,
+        },
+    },
+}
+

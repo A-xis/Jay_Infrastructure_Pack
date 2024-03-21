@@ -1,0 +1,199 @@
+--****************************************************************************
+--**
+--**  File     :  /ZZL0105_script.lua
+--**  Author(s):  Packer, PatientBeard
+--**
+--**  Summary  :  Reclaim Turret Aggressive
+--****************************************************************************
+local CConstructionStructureUnit = import('/lua/cybranunits.lua').CConstructionStructureUnit
+
+ZZL0105 = Class(CConstructionStructureUnit) 
+{
+    OnCreate = function(self)
+        local reclaimthread = ForkThread(self.ReclaimerThread, self)
+        self.Trash:Add(reclaimthread)
+        CConstructionStructureUnit.OnCreate(self)
+    end,
+    ReclaimCheck = function(self, unit)
+		IssueReclaim({self}, unit)
+    end,
+    ReclaimerThread = function(self)
+        local aiBrain = GetArmyBrain(self:GetArmy())
+        local bp = self:GetBlueprint().Economy.MaxBuildDistance
+		local halfBp = bp * .5
+		local closeBp = bp * .35
+		local medBp = bp * .75
+        local pos = self:GetPosition()
+        local curMass = 0
+        --keep 10 items to reclaim every 2 seconds
+        local targetQueue = 20
+        local ignoredBlacklistClearCounter = 0
+        while not self.Dead do
+			if not self:IsUnitState("Reclaiming") or self:IsIdleState() then 
+				local reclaimableTargets = {}
+				local sortedReclaimableTargets = {}
+				ignoredBlacklistClearCounter = 0
+				local addToQueue = targetQueue
+				local processedUnits = {}
+				local liveReclaiming = false
+				local rect1 = Rect(pos[1] - halfBp, pos[3] - halfBp, pos[1] + halfBp, pos[3] + halfBp)
+				local rect2 = Rect(pos[1] - bp, pos[3] - bp, pos[1] + bp, pos[3] + bp)
+				local reclaimTargets = GetUnitsInRect(rect1)
+				if reclaimTargets then 
+					for i, unit in reclaimTargets do 
+						processedUnits[unit] = true
+						--make sure the unit is not flying or in orbit.
+						--flying planes and satellites aren't reclaimable.
+						if unit and unit.Layer ~= "Air" and unit.Layer ~= "Orbital" then
+							targetpos = unit:GetPosition()
+							local targetDistance = VDist2(pos[1], pos[3], targetpos[1], targetpos[3])
+							if (targetDistance <= bp) then
+								--start with everything that is not an ally.  neutrals and enemies.
+								if not IsAlly(self:GetArmy(), unit:GetArmy()) and not unit.Dead then
+									addToQueue = addToQueue - 1
+									reclaimableTargets[i] = targetDistance
+								end
+							end
+						end
+						if addToQueue < 1 then 
+							break
+						end
+					end
+					--then lets reclaim the live targets.
+					if table.getn(reclaimableTargets) > 0 then 
+						liveReclaiming = true
+						table.sort(reclaimableTargets)
+						for unitKey, distance in reclaimableTargets do 
+							self.ReclaimCheck(self, reclaimTargets[unitKey])
+						end
+					end
+				end
+				reclaimableTargets = {}
+				if addToQueue > 0 then 
+					reclaimTargets = GetUnitsInRect(rect2)
+					if reclaimTargets then 
+						for i, unit in reclaimTargets do 
+							if processedUnits[unit] ~= true then
+								processedUnits[unit] = true
+								--start with everything that is not an ally.  neutrals and enemies.
+								if unit and unit.Layer ~= "Air" and unit.Layer ~= "Orbital" then
+									targetpos = unit:GetPosition()
+									local targetDistance = VDist2(pos[1], pos[3], targetpos[1], targetpos[3])
+									if (targetDistance <= bp) then
+										if not IsAlly(self:GetArmy(), unit:GetArmy()) and not unit.Dead then
+											addToQueue = addToQueue - 1
+											reclaimableTargets[i] = targetDistance
+										end
+									end
+								end
+								if addToQueue < 1 then 
+									break
+								end
+							end
+						end
+						--then lets reclaim the live targets.
+						if table.getn(reclaimableTargets) > 0 then 
+							liveReclaiming = true
+							table.sort(reclaimableTargets)
+							for unitKey, distance in reclaimableTargets do 
+								self.ReclaimCheck(self, reclaimTargets[unitKey])
+							end
+						end
+					end
+				end
+				if addToQueue > 0 then 
+					curMass = aiBrain:GetEconomyStoredRatio('MASS')
+					-- If Current Mass Greater than 95%, and we aren't reclaiming live units, clear.
+					if curMass > .95 and not liveReclaiming then 
+						IssueClearCommands({self})
+					elseif curMass < .8 then
+						reclaimableTargets = {}
+						if addToQueue > 0 then 
+							reclaimTargets = GetReclaimablesInRect(rect1)
+							if reclaimTargets then 
+								for i, unit in reclaimTargets do 
+									if processedUnits[unit] ~= true then
+										processedUnits[unit] = true
+										--start with everything that is not an ally.  neutrals and enemies.
+										if unit then
+											targetpos = unit:GetPosition()
+											local targetDistance = VDist2(pos[1], pos[3], targetpos[1], targetpos[3])
+											if (targetDistance <= bp) then
+												if IsUnit(unit) then
+													if not IsAlly(self:GetArmy(), unit:GetArmy()) and not unit.Dead then
+														addToQueue = addToQueue - 1
+														reclaimableTargets[i] = targetDistance
+													end
+												else
+													addToQueue = addToQueue - 1
+													reclaimableTargets[i] = targetDistance
+												end
+											end
+										end
+										if addToQueue < 1 then 
+											break
+										end
+									end
+								end
+								--then lets reclaim the live targets.
+								if table.getn(reclaimableTargets) > 0 then 
+									table.sort(reclaimableTargets)
+									for unitKey, distance in reclaimableTargets do 
+										self.ReclaimCheck(self, reclaimTargets[unitKey])
+									end
+								end
+							end
+						end
+						reclaimableTargets = {}
+						if addToQueue > 0 then 
+							reclaimTargets = GetReclaimablesInRect(rect2)
+							if reclaimTargets then 
+								for i, unit in reclaimTargets do 
+									if processedUnits[unit] ~= true then
+										processedUnits[unit] = true
+										if unit then
+											targetpos = unit:GetPosition()
+											local targetDistance = VDist2(pos[1], pos[3], targetpos[1], targetpos[3])
+											if (targetDistance <= bp) then
+												if IsUnit(unit) then
+													if not IsAlly(self:GetArmy(), unit:GetArmy()) and not unit.Dead then
+														addToQueue = addToQueue - 1
+														reclaimableTargets[i] = targetDistance
+													end
+												else
+													addToQueue = addToQueue - 1
+													reclaimableTargets[i] = targetDistance
+												end
+											end
+										end
+										if addToQueue < 1 then 
+											break
+										end
+									end
+								end
+								--then lets reclaim the live targets.
+								if table.getn(reclaimableTargets) > 0 then 
+									table.sort(reclaimableTargets)
+									for unitKey, distance in reclaimableTargets do 
+										self.ReclaimCheck(self, reclaimTargets[unitKey])
+									end
+								end
+							end
+						end
+					end
+				end
+
+--			else				
+			--this is a sanity failsafe in case we don't have any changes
+			--for the blacklist in 60 seconds (30 attempts).
+--				ignoredBlacklistClearCounter = ignoredBlacklistClearCounter + 1
+--				if ignoredBlacklistClearCounter > 60 then 
+--					ignoredBlacklistClearCounter = 0
+--					IssueClearCommands({self})
+--				end
+			end
+			WaitTicks(4)
+        end
+    end
+}
+TypeClass = ZZL0105

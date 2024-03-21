@@ -1,0 +1,31 @@
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "xsb1106",
+
+    Categories = {
+        'SHOWQUEUE',
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_upgradable>Upgradeable',
+        },
+    },
+    Economy = {
+        BuildRate = 12,
+        BuildableCategory = {
+            'exsbmst2',
+        },
+        RebuildBonusIds = {
+            'xsb1106',
+            'exsbmst2',
+            'exsbmst3',
+        },
+    },
+    General = {
+        UpgradesTo = 'exsbmst2',
+        CommandCaps = {
+            RULEUCC_Pause = true,
+        },
+    },
+}
+

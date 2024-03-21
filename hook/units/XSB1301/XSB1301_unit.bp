@@ -1,0 +1,26 @@
+UnitBlueprint {
+    Merge = true,
+	BlueprintId = "xsb1301",
+	
+    Display = {
+        Abilities = {
+            '<LOC ability_upgradable>Upgradeable',
+        },
+    },
+    Economy = {
+        BuildRate = 25,
+        BuildableCategory = {
+            'xsb1401',
+        },
+        RebuildBonusIds = {
+            'xsb1301',
+            'xsb1401',
+        },
+    },
+    General = {
+		UpgradesTo = 'xsb1401',
+        CommandCaps = {
+            RULEUCC_Pause = true,
+        },
+    },
+}

@@ -1,0 +1,26 @@
+UnitBlueprint {
+    Merge = true,
+	BlueprintId = "urb1201",
+	
+    Display = {
+        Abilities = {
+            '<LOC ability_upgradable>Upgradeable',
+        },
+    },
+    Economy = {
+        BuildRate = 12,
+        BuildableCategory = {
+            'urpowerup',
+        },
+        RebuildBonusIds = {
+            'urb1201',
+            'urpowerup',
+        },
+    },
+    General = {
+		UpgradesTo = 'urpowerup',
+        CommandCaps = {
+            RULEUCC_Pause = true,
+        },
+    },
+}
