@@ -34,5 +34,4 @@ history = [[
 - Fix HC not beeing buildable at Tier1
 - Added Reclaim Turret (also fixed icon ingame, and texture)
 
-
 ]]
