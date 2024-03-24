@@ -22,9 +22,33 @@ UnitList = {
         Seraphim = {'BRPBT1PERI', 80}, 
     },
     T3ShieldDefense = {
-		Aeon = {'fab4401', 35},
-		Cybran = {'frb4401', 35},
-		Seraphim = {'fsb4401', 35},
-		UEF = {'feb4401', 35},
+        Aeon = {'fab4401', 35},
+        Cybran = {'frb4401', 35},
+        Seraphim = {'fsb4401', 35},
+        UEF = {'feb4401', 35},
+    },
+        T2MassStrorage = {
+        Aeon = {'euabmst2', 80},
+        Cybran = {'eurbmst2', 80},
+        Seraphim = {'exsbmst2', 80},
+        UEF = {'euebmst2', 80},
+    },
+    T3MassStrorage = {
+        Aeon = {'euabmst3', 80},
+        Cybran = {'eurbms3t', 80},
+        Seraphim = {'exsbmst3', 80},
+        UEF = {'euebmst3', 80},
+    },
+    T2EnergyStrorage = {
+        Aeon = {'euabest2', 80},
+        Cybran = {'eurbest2', 80},
+        Seraphim = {'exsbest2', 80},
+        UEF = {'euebest2', 80},
+    },
+    T3EnergyStrorage = {
+        Aeon = {'euabest3', 80},
+        Cybran = {'eurbest3', 80},
+        Seraphim = {'exsbest3', 80},
+        UEF = {'euebest3', 80},
     },
 }

@@ -31,6 +31,10 @@ UnitBlueprint {
     Categories = {
         'PRODUCTFA',
         'SELECTABLE',
+        'BUILTBYTIER2ENGINEER',
+        'BUILTBYTIER2COMMANDER',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
         'SERAPHIM',
         'STRUCTURE',
         'ECONOMIC',
