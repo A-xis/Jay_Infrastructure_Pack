@@ -30,8 +30,13 @@ after = {"9e8ea941-c306-aaaf-b367-u00000019000",
 
 history = [[
 
+### Version 109 - InDev
+ - Feature: Allow T2 and T3 Storages to be built by engi and commander (https://github.com/A-xis/Jay_Infrastructure_Pack/issues/1)
+ - Fix: T2 and T3 shield generator not being buildable by player for Aeon (https://github.com/A-xis/Jay_Infrastructure_Pack/issues/3)
+
 ### Version 108 - 15/03/2024
 - Fix HC not beeing buildable at Tier1
 - Added Reclaim Turret (also fixed icon ingame, and texture)
+
 
 ]]
