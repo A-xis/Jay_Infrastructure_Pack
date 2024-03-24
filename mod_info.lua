@@ -1,6 +1,6 @@
 name = "Jay Infrastructure Pack"
 uid = "c413b319-ax1s-42d5-b62b-3115ce012ccf"
-version = 108
+version = 109
 copyright = "Jay, PJ, Uveso, Packer, PatientBeard"
 description = "AI Upgradeable T2 & T3 E/M-Storage\nT2+ & T3+ PGens\nT2 & T3 & Exp HC Plant\nT3+ MEX\nT4 Shields\nReclaim Turret (by Packer/PatientBeard)"
 author = "Jay, PJ, big thank you to Uveso and whole modding community, Packer/PatientBeard for Reclaim Turret"
@@ -30,7 +30,7 @@ after = {"9e8ea941-c306-aaaf-b367-u00000019000",
 
 history = [[
 
-### Version 109 - InDev
+### Version 109 - 24/03/2024
  - Feature: Allow T2 and T3 Storages to be built by engi and commander (https://github.com/A-xis/Jay_Infrastructure_Pack/issues/1)
  - Fix: T2 and T3 shield generator not being buildable by player for Aeon (https://github.com/A-xis/Jay_Infrastructure_Pack/issues/3)
 
