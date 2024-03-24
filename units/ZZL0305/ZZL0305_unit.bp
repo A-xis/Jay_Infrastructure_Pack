@@ -179,7 +179,8 @@ UnitBlueprint {
         },
         UnitName = '<LOC ZZL0305_name>Wreck Reclaimer',
         UnitWeight = 1,
-        --UpgradesFrom = 'zzl0305',
+        UpgradesFrom = 'zzl0205',
+        UpgradesFromBase = 'zzl0105',
     },
     Intel = {
         VisionRadius = 15,
