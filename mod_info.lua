@@ -1,5 +1,5 @@
 name = "Jay Infrastructure Pack"
-uid = "c413b319-ax1s-42d5-b62b-3115ce012ccf"
+uid = "c413b319-ax1s-infra-pack-release109"
 version = 109
 copyright = "Jay, PJ, Uveso, Packer, PatientBeard"
 description = "AI Upgradeable T2 & T3 E/M-Storage\nT2+ & T3+ PGens\nT2 & T3 & Exp HC Plant\nT3+ MEX\nT4 Shields\nReclaim Turret (by Packer/PatientBeard)"
@@ -12,7 +12,9 @@ exclusive = false
 ui_only = false
 requires = { }
 requiresNames = { }
-conflicts = { }
+conflicts = {
+		"c413b319-ax1s-42d5-b62b-3115ce012ccf" -- Jay Infra Pack -- 108
+	}
 before = {"9e8ea941-c306-4751-b367-a00000018000"}
 after = {"9e8ea941-c306-aaaf-b367-u00000019000",
 		"7dd8a7469-65e8-4f45-91ab-bf4fbfe95725",
