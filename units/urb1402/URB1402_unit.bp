@@ -155,7 +155,7 @@ UnitBlueprint {
 		UpgradesFromBase = 'urb1302',
     },
     Intel = {
-        VisionRadius = 25,
+        VisionRadius = 24,
     },
     Interface = {
         HelpText = '<LOC urb1402_help>Experimental Mass Extractor',

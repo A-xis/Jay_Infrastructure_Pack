@@ -178,7 +178,7 @@ UnitBlueprint {
         UpgradesFromBase = 'xsb4202',
     },
     Intel = {
-        VisionRadius = 39,
+        VisionRadius = 40,
     },
     Interface = {
         HelpText = '<LOC EXPSHDSER001_help>Experimental Shield Generator',

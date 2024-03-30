@@ -188,7 +188,7 @@ UnitBlueprint {
         --UpgradesTo = 'zzl0305',
     },
     Intel = {
-        VisionRadius = 15,
+        VisionRadius = 16,
     },
     LifeBarHeight = 0.075,
     LifeBarOffset = 1.1,
