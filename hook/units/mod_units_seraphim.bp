@@ -2,7 +2,22 @@ UnitBlueprint {
     Merge = true,
     BlueprintId = "xsb4301", # Heavy Shield Generator
     Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'SERAPHIM',
+        'DRAGBUILD',
+        'STRUCTURE',
+        'DEFENSE',
+        'TECH3',
+        'SHIELD',
+        'SIZE12',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'OVERLAYDEFENSE',
         'SHOWQUEUE',
+        'SORTDEFENSE',
     },
     Display = {
         Abilities = {
@@ -12,7 +27,7 @@ UnitBlueprint {
     },
     Economy = {
         BuildRate = 12,
- 	      BuildableCategory = {
+          BuildableCategory = {
             'fsb4401',
         },
     },
