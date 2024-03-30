@@ -1,6 +1,6 @@
 name          = "Jay Infrastructure Pack"
-uid           = "c413b319-ax1s-infra-pack-release109"
-version       = 109
+uid           = "c413b319-axis-infra-pack-release110"
+version       = 110
 copyright     = "Jay, PJ, Uveso, Packer, PatientBeard"
 description   = "AI Upgradeable T2 & T3 E/M-Storage\nT2+ & T3+ PGens\nT2 & T3 & Exp HC Plant\nT3+ MEX\nT4 Shields\nReclaim Turret (by Packer/PatientBeard)"
 author        = "Jay, PJ, big thank you to Uveso and whole modding community, Packer/PatientBeard for Reclaim Turret"
@@ -14,6 +14,7 @@ ui_only       = false
 requires      = { }
 requiresNames = { }
 conflicts     = {
+		"c413b319-ax1s-infra-pack-release109"  -- Jay Infra Pack -- 109
 		"c413b319-ax1s-42d5-b62b-3115ce012ccf" -- Jay Infra Pack -- 108
 	}
 before        = {"9e8ea941-c306-4751-b367-a00000018000"}
@@ -32,6 +33,10 @@ after         = {"9e8ea941-c306-aaaf-b367-u00000019000",
 		"ad271f12-c9e9-4222-870b-fe68b842f52b"}
 
 history       = [[
+
+### Version 110 - 30/03/2024
+ - fix: fixes various VisionRadius and stuff that where visible in the console (https://github.com/A-xis/Jay_Infrastructure_Pack/issues/8)
+ - fix: Seraph ACU can't build T3 shield (https://github.com/A-xis/Jay_Infrastructure_Pack/issues/7)
 
 ### Version 109 - 24/03/2024
  - Feature: Allow T2 and T3 Storages to be built by engi and commander (https://github.com/A-xis/Jay_Infrastructure_Pack/issues/1)
