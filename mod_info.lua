@@ -14,7 +14,7 @@ ui_only       = false
 requires      = { }
 requiresNames = { }
 conflicts     = {
-		"c413b319-ax1s-infra-pack-release109"  -- Jay Infra Pack -- 109
+		"c413b319-ax1s-infra-pack-release109", -- Jay Infra Pack -- 109
 		"c413b319-ax1s-42d5-b62b-3115ce012ccf" -- Jay Infra Pack -- 108
 	}
 before        = {"9e8ea941-c306-4751-b367-a00000018000"}
