@@ -169,7 +169,7 @@ UnitBlueprint {
 		UpgradesFromBase = 'xsb1102',
 	},
 	Intel = {
-		VisionRadius = 125,
+		VisionRadius = 126,
 	},
 	Interface = {
 		HelpText = 'HydroCarbon Perimeter Monitoring System',

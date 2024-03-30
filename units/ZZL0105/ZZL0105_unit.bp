@@ -189,7 +189,7 @@ UnitBlueprint {
         --UpgradesTo = 'zzl0205',
     },
     Intel = {
-        VisionRadius = 15,
+        VisionRadius = 16,
     },
     Interface = {
         HelpText = '<LOC ZZL0105_help>Reclaim Turret',
