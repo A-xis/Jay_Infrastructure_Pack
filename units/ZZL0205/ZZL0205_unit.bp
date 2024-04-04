@@ -141,6 +141,8 @@ UnitBlueprint {
         MaxBuildDistance = 50,
         RebuildBonusIds = {
             'zzl0105',
+            'zzl0205',
+            'zzl0305',
         },
     },
     Footprint = {

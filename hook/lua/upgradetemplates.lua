@@ -118,6 +118,9 @@ table.insert(StructureUpgradeTemplates[1], {'ueb1301', 'ueb1401'}) -- T3 PGen Up
 
 table.insert(StructureUpgradeTemplates[1], {'UEB4301', 'feb4401'}) -- T3 to Xshield Upgrade
 
+table.insert(StructureUpgradeTemplates[1], {'zzl0105', 'zzl0205'}) -- T2 Reclaim Turret
+table.insert(StructureUpgradeTemplates[1], {'zzl0205', 'zzl0305'}) -- T3 Reclaim Turret
+
 
 -- alien structure upgrades
 table.insert(StructureUpgradeTemplates[2], {'uab1102', 'bab1202'}) -- HC Upgrade - TECH1 to TECH2
@@ -139,6 +142,8 @@ table.insert(StructureUpgradeTemplates[2], {'uab1301', 'uab1401'}) -- T3 PGen Up
 table.insert(StructureUpgradeTemplates[2], {'uab4202', 'uab4301'}) -- T2 to T3 shield Upgrade
 table.insert(StructureUpgradeTemplates[2], {'uab4301', 'fab4401'}) -- T3 to Xshield Upgrade
 
+table.insert(StructureUpgradeTemplates[2], {'zzl0105', 'zzl0205'}) -- T2 Reclaim Turret
+table.insert(StructureUpgradeTemplates[2], {'zzl0205', 'zzl0305'}) -- T3 Reclaim Turret
 
 -- recycler structure upgrades
 table.insert(StructureUpgradeTemplates[3], {'urb1102', 'brb1202'}) -- HC Upgrade - TECH1 to TECH2
@@ -159,6 +164,8 @@ table.insert(StructureUpgradeTemplates[3], {'urb1301', 'urb1401'}) -- T3 PGen Up
 
 table.insert(StructureUpgradeTemplates[3], {'urb4207', 'frb4401'}) -- T3 to Xshield Upgrade
 
+table.insert(StructureUpgradeTemplates[3], {'zzl0105', 'zzl0205'}) -- T2 Reclaim Turret
+table.insert(StructureUpgradeTemplates[3], {'zzl0205', 'zzl0305'}) -- T3 Reclaim Turret
 
 -- seraphim structure upgrades
 table.insert(StructureUpgradeTemplates[4], {'xsb1102', 'bsb1202'}) -- HC Upgrade - TECH1 to TECH2
@@ -178,3 +185,6 @@ table.insert(StructureUpgradeTemplates[4], {'xsb1201', 'xspowerup'}) -- T2 PGen 
 table.insert(StructureUpgradeTemplates[4], {'xsb1301', 'xsb1401'}) -- T3 PGen Upgrade
 
 table.insert(StructureUpgradeTemplates[4], {'xsb4301', 'fsb4401'}) -- T3 to Xshield Upgrade
+
+table.insert(StructureUpgradeTemplates[4], {'zzl0105', 'zzl0205'}) -- T2 Reclaim Turret
+table.insert(StructureUpgradeTemplates[4], {'zzl0205', 'zzl0305'}) -- T3 Reclaim Turret
