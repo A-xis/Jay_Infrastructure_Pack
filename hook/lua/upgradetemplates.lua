@@ -167,6 +167,8 @@ table.insert(StructureUpgradeTemplates[3], {'urb4207', 'frb4401'}) -- T3 to Xshi
 table.insert(StructureUpgradeTemplates[3], {'zzl0105', 'zzl0205'}) -- T2 Reclaim Turret
 table.insert(StructureUpgradeTemplates[3], {'zzl0205', 'zzl0305'}) -- T3 Reclaim Turret
 
+table.insert(StructureUpgradeTemplates[3], {'urb1104', 'urb1204'}) -- T2 Mass Fab
+
 -- seraphim structure upgrades
 table.insert(StructureUpgradeTemplates[4], {'xsb1102', 'bsb1202'}) -- HC Upgrade - TECH1 to TECH2
 table.insert(StructureUpgradeTemplates[4], {'bsb1202', 'bsb1302'}) -- HC Upgrade - TECH2 to TECH3

@@ -1,0 +1,46 @@
+UnitBlueprint {
+    Merge = true,
+    BlueprintId = "urb1104",
+    Categories = {
+        'PRODUCTSC1',
+        'SELECTABLE',
+        'BUILTBYTIER2ENGINEER',
+        'BUILTBYTIER2COMMANDER',
+        'BUILTBYTIER3ENGINEER',
+        'BUILTBYTIER3COMMANDER',
+        'CYBRAN',
+        'STRUCTURE',
+        'ECONOMIC',
+        'TECH2',
+        'MASSPRODUCTION',
+        'MASSFABRICATION',
+        'DRAGBUILD',
+        'SIZE4',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWQUEUE',
+        'SORTECONOMY',
+    },
+    Display = {
+        Abilities = {
+            '<LOC ability_deathaoe>Volatile',
+            '<LOC ability_upgradable>Upgradeable',
+        },
+    },
+    Economy = {
+        BuildRate = 12,
+        BuildableCategory = {
+            'urb1104',
+        },
+        RebuildBonusIds = {
+            'urb1104',
+            'urb1204',
+        },
+    },
+    General = {
+        UpgradesTo = 'urb1204',
+        CommandCaps = {
+            RULEUCC_Pause = true,
+        },
+    },
+}
