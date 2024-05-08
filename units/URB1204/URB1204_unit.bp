@@ -36,6 +36,7 @@ UnitBlueprint {
         'VISIBLETORECON',
         'RECLAIMABLE',
         'SORTECONOMY',
+        'VOLATILE',
         'UPGRADED',
     },
     CollisionOffsetY = 0,
@@ -91,8 +92,8 @@ UnitBlueprint {
         UniformScale = 0.2,
     },
     Economy = {
-        BuildCostEnergy = 10000,
-        BuildCostMass = 300,
+        BuildCostEnergy = 12000,
+        BuildCostMass = 600,
         BuildTime = 1000,
         MaintenanceConsumptionPerSecondEnergy = 300,
         ProductionPerSecondMass = 3,
