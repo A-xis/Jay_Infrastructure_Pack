@@ -94,7 +94,7 @@ UnitBlueprint {
     Economy = {
         BuildCostEnergy = 12000,
         BuildCostMass = 600,
-        BuildTime = 1000,
+        BuildTime = 1200,
         MaintenanceConsumptionPerSecondEnergy = 300,
         ProductionPerSecondMass = 3,
         RebuildBonusIds = {
