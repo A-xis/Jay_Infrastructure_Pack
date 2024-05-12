@@ -136,6 +136,8 @@ UnitBlueprint {
         MaxBuildDistance = 75,
         RebuildBonusIds = {
             'zzl0105',
+            'zzl0205',
+            'zzl0305',
         },
     },
     Footprint = {
@@ -179,7 +181,8 @@ UnitBlueprint {
         },
         UnitName = '<LOC ZZL0305_name>Wreck Reclaimer',
         UnitWeight = 1,
-        --UpgradesFrom = 'zzl0305',
+        UpgradesFrom = 'zzl0205',
+        UpgradesFromBase = 'zzl0105',
     },
     Intel = {
         VisionRadius = 16,
