@@ -119,7 +119,7 @@ UnitBlueprint {
         BuildCostMass = 9500,
         BuildTime = 10500,
         MaintenanceConsumptionPerSecondEnergy = 1500,
-	RebuildBonusIds = {
+        RebuildBonusIds = {
             'frb4401',
         },
     },

@@ -27,7 +27,7 @@ UnitList = {
         Seraphim = {'fsb4401', 35},
         UEF = {'feb4401', 35},
     },
-        T2MassStrorage = {
+    T2MassStrorage = {
         Aeon = {'euabmst2', 80},
         Cybran = {'eurbmst2', 80},
         Seraphim = {'exsbmst2', 80},

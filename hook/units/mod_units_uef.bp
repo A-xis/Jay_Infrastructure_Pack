@@ -2,8 +2,8 @@ UnitBlueprint {
     Merge = true,
     BlueprintId = "UEB4301",
     Economy = {
-	      BuildRate = 12,
- 	      BuildableCategory = {
+        BuildRate = 12,
+        BuildableCategory = {
             'feb4401',
         },
     },
