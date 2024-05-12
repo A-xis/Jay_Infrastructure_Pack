@@ -89,7 +89,6 @@ UnitBlueprint {
     Display = {
         Abilities = {
             '<LOC ability_reclaim>Reclaims',
-            '<LOC ability_upgradable>Upgradeable',
         },
         Mesh = {
             IconFadeInZoom = 130,
