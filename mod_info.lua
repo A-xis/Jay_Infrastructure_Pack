@@ -1,6 +1,6 @@
 name          = "Jay Infrastructure Pack"
-uid           = "c413b319-axis-infra-pack-release111"
-version       = 111
+uid           = "c413b319-axis-infra-pack-release112"
+version       = 112
 copyright     = "Jay, PJ, Uveso, Packer, PatientBeard"
 description   = "AI Upgradeable T2 & T3 E/M-Storage\nT2+ & T3+ PGens\nT2 & T3 & Exp HC Plant\nT3+ MEX\nT4 Shields\nReclaim Turret (by Packer/PatientBeard)"
 author        = "Jay, PJ, big thank you to Uveso and whole modding community, Packer/PatientBeard for Reclaim Turret"
@@ -14,6 +14,7 @@ ui_only       = false
 requires      = { }
 requiresNames = { }
 conflicts     = {
+		"c413b319-axis-infra-pack-release111",  -- Jay Infra Pack -- 111
 		"c413b319-axis-infra-pack-release110",  -- Jay Infra Pack -- 110
 		"c413b319-ax1s-infra-pack-release109",  -- Jay Infra Pack -- 109
 		"c413b319-ax1s-42d5-b62b-3115ce012ccf", -- Jay Infra Pack -- 108
@@ -35,8 +36,10 @@ after         = {"9e8ea941-c306-aaaf-b367-u00000019000",
 		"ad271f12-c9e9-4222-870b-fe68b842f52b"}
 
 history       = [[
+## Version 112 - 19/07/2024
+ - Fix : Remove the modifications for SMD, as they were no longer working after patch 3810
 
-### Version 110 - 30/03/2024
+### Version 111 - 30/03/2024
  - Feature : allow reclaim turret to be upgraded Upgradable Reclaim Turrets (https://github.com/A-xis/Jay_Infrastructure_Pack/issues/5)
 
  - Known bug :
